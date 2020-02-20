@@ -1,0 +1,10 @@
+{
+    "name": "Snyk NewTab Shortcuts",
+    "description": "Shortcut tool to make our lives easier",
+    "manifest_version": 2,
+    "version": "0.0.0.1",
+    "permissions" : ["management", "alarms","nativeMessaging"],
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    }
+}

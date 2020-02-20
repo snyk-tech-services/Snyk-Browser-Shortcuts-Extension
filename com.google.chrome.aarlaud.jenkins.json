@@ -1,0 +1,9 @@
+{
+  "name": "com.google.chrome.aarlaud.jenkins",
+  "description": "Starting Jenkins using Chrome Native Messaging API",
+  "path": "/path/to/startJenkins.sh",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://<yourextID>/"
+  ]
+}

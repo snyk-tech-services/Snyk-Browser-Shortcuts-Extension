@@ -1,0 +1,130 @@
+    <html>
+      <head>
+          <script src="newtab.js"></script>
+      </head>
+      <style>
+      html {
+          background: url('images/snyk-bg.png') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          font-family: Prenton,"Gill Sans",Calibri,sans-serif;
+
+          text-align: left;
+      }
+      #container{
+
+        width: 100%;
+        display: flex;
+        margin-top:30px;
+        justify-content: space-between;
+      }
+      #demo-links {
+        /* margin: 200px 40%; */
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        font-size: 1.0rem;
+      }
+
+      a {
+        text-decoration: none;
+        color:white;
+      }
+      .btn a, button {
+        background-color: #0f8a8a;
+        background-image: linear-gradient(-180deg,#119a9a 0,#0f8383 100%);
+        border: 1px solid #0f8a8a;
+        border-bottom-color: #0e7c7c;
+        box-shadow: 0 1px 0 0 #0e7c7c, inset 0 0 0 1px rgba(255,255,255,.1);
+        color: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        /* font-size: 2.125rem; */
+        font-weight: 400;
+        line-height: 1.2;
+        padding: 11px 14px 8px;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        margin-top: 20px;
+        width: 100%;
+      }
+      #internal-links {
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        right: 50px;
+        /* margin: 0px 60%; */
+
+
+      }
+
+      #timeline{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+        background-color: white;
+        height: 40px;
+        text-align: center;
+        font-size: 15px;
+      }
+      .region{
+        width: 100%;
+      }
+
+      .dnd{
+        background-color: #ebccd1;
+        border-color: #ebccd1;
+      }
+      </style>
+      <body>
+        <div id="container">
+          <div id="demo-links">
+            <div id="find" class="btn"><a href="https://snyk.io/org/aarlaud-snyk-demo/projects">Find</a></div>
+            <div id="fix" class="btn"><a href="https://snyk.io/org/aarlaud-snyk-demo/fix/aarlaud-snyk-demo/goof">Fix</a></div>
+            <div id="prevent" class="btn"><a href="https://github.com/geva/goof/pull/2">Prevent</a></div>
+            <div id="preventGL" class="btn"><a href="https://gitlab.com/anton16/nodejs-express-template/pipelines/21127017">Prevent (GL)</a></div>
+            <div id="preventBB" class="btn"><a href="https://bitbucket-server.test.snyk.io/users/snyk-demo/repos/goof/pull-requests/23/overview">Prevent (BB)</a></div>
+            <div id="codeinsightBB" class="btn"><a href="https://bitbucket-server.test.snyk.io/projects/MIKI/repos/goof/pull-requests/11/diff">BB Code Insights</a></div>
+            <div id="monitor" class="btn"><a href="https://github.com/freeCodeCamp/freeCodeCamp/pull/9872">Monitor</a></div>
+            <div id="report" class="btn"><a href="https://snyk.io/org/geva/reports">Report</a></div>
+            <div id="tsGH" class="btn"><a href="https://github.com/snyk-tech-services/">TS Github</a></div>
+          </div>
+          <div id="internal-links">
+            <div id="CN" class="btn"><a href="https://airtable.com/shrALSvIROINFswjD">Feat. Requests</a></div>
+            <div id="calendar" class="btn"><a href="https://calendar.google.com/calendar/r/week">Calendar</a></div>
+            <div id="gce" class="btn"><a href="https://console.cloud.google.com/compute/instances?project=orbital-lacing-193014">orbital GCE VMs</a></div>
+            <div id="gke" class="btn"><a href="https://console.cloud.google.com/kubernetes/workload?project=orbital-lacing-193014&workload_list_tablesize=50">orbital GKE Workloads</a></div>
+            <div id="tsgce" class="btn"><a href="https://console.cloud.google.com/compute/instances?project=snyk-technical-services">TS GCE VMs</a></div>
+            <div id="tsgke" class="btn"><a href="https://console.cloud.google.com/kubernetes/workload?project=snyk-technical-services&workload_list_tablesize=50">TS GKE Workloads</a></div>
+            <div id="bquery" class="btn"><a href="https://console.cloud.google.com/bigquery">BigQuery</a></div>
+            <div id="gcr" class="btn"><a href="https://console.cloud.google.com/gcr/images/snyk-onprem?project=snyk-onprem&organizationId=757265552102">GCR-onprem</a></div>
+            <div id="tsgcr" class="btn"><a href="https://console.cloud.google.com/gcr/images/snyk-onprem?project=snyk-technical-services&organizationId=757265552102">GCR-TS</a></div>
+            <div id="onprem" class="btn"><a href="https://snyksec.atlassian.net/browse/INFRA-176">Onprem issues</a></div>
+            <div id="ts" class="btn"><a href="https://snyksec.atlassian.net/jira/software/projects/TS/boards/109">TS Board</a></div>
+
+          </div>
+          <div id="timeline">
+            <div class="region" id="pst">PST<br /><span class="clock">3.13pm</span></div>
+            <div class="region" id="est">EST<br /><span class="clock">3.13pm</span></div>
+            <div class="region" id="london">London<br /><span class="clock">3.13pm</span></div>
+            <div class="region" id="tlv">TLV<br /><span class="clock">3.13pm</span></div>
+            <div class="region" id="india">India<br /><span class="clock">3.13pm</span></div>
+          </div>
+          <div id="apps">
+
+          </div>
+        </div>
+      </body>
+    </html>
