@@ -85,9 +85,9 @@ function date_time()
 
           }
           // daylight savings
-          if(date.isDstObserved){
-            offset++;
-          }
+          // if(date.isDstObserved){
+          //   offset++;
+          // }
 
           h = date.getUTCHours() + offset;
           console.log(h);

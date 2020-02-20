@@ -1,4 +1,7 @@
 # Snyk Shortcut extension
+ 
+![](images/screenshot.png)
+
 
 ## Installation
 1. git clone this repo wherever you want on your drive.
